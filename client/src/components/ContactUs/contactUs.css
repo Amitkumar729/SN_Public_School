@@ -1,0 +1,137 @@
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  /* border: 1px solid red; */
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  justify-content: space-evenly;
+  gap: 30px;
+  box-shadow: 0 4px 8px #17a2b8; /* Add box shadow */
+  padding: 20px; /* Optional: add padding around the content */
+  border-radius: 10px; /* Optional: round corners for the box shadow */
+  background-color: #fff; /* Optional: background color for better contrast */
+}
+
+.contact-left {
+  /* border: 1px solid red; */
+  /* padding: 15px; */
+}
+.contact-left img {
+  height: 60vh;
+  border-radius: 10px;
+}
+
+.contact-right {
+  border: 1px solid #17a2b8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.contact-header h4 {
+  /* border: 1px solid red; */
+  font-weight: bold;
+  font-family: "Lobster Two", cursive;
+}
+
+.form-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 700px; */
+}
+
+.form-row {
+  display: flex;
+  gap: 20px; /* Adjust gap as needed */
+  /* flex-wrap: wrap; Allows wrapping for responsiveness */
+}
+
+.form-group {
+  /* border: 1px solid red; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px; /* Limit the width of each form group */
+}
+
+.form-group label {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input {
+  width: 100%; /* Ensure the input field takes up the full width */
+  padding: 10px; /* Add padding inside the input field */
+  border: 1px solid #ccc; /* Set a border color */
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #17a2b8;
+  border: 1px solid #17a2b8;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin-top: 20px; /* Space above the button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column; /* Stack the left and right sections on smaller screens */
+    gap: 20px; /* Reduce gap between sections */
+    padding: 10px; /* Reduce padding */
+    /* width: 100%; */
+  }
+
+  .contact-right {
+    width: 100%;
+    /* border: 1px solid red; */
+    /* align-items: start; */
+  }
+
+  .contact-left img {
+    height: auto; /* Adjust image height */
+    width: 100%; /* Ensure image is responsive */
+  }
+
+  .contact-form {
+    width: 100%; /* Ensure the form takes up full width on smaller screens */
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* align-items: start; */
+  }
+
+  .form-row {
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 10px; /* Adjust gap between rows */
+  }
+
+  .form-group label {
+    /* font-size: 21px; */
+  }
+}

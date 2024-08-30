@@ -1,0 +1,138 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+
+}
+
+.activity-header h2 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: #17a2b8;
+}
+
+.activity-wrapper {
+    width: calc(93.333% - 5px);
+    margin: 0 auto; /* Center the slider container */
+    border: 1px solid #17a2b8;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.slick-slide {
+    padding: 10px; /* Optional: add some space between slides */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black; /* Customize arrow colors */
+}
+
+.activity-container h3 {
+    background-color: #17a2b8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.activity-photo-container {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+
+.activity-photo-container img {
+    height: 250px;
+    border-radius: 15px;
+}
+
+.more-photos-button {
+    background-color: #17a2b8;
+  /* border-color: #17a2b8; */
+  border: 1px #17a2b8;
+  height: 50px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+    /* color: #17a2b8; */
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .activity-wrapper {
+        /* width: 100%; */
+    }
+    .activity-container {
+        width: 100%;
+    }
+
+    .activity-container h3 {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .activity-photo-container {
+        align-items: center;
+    }
+    .activity-photo-container img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity-container h3 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .activity-container {
+        width: 100%;
+    }
+    .activity-photo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+    .activity-photo-container img {
+        height: 220px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-container h3 {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .activity-container {
+        width: 100%;
+    }
+
+    .activity-photo-container {
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+
+    .activity-photo-container img {
+        height: 220px;
+    }
+}

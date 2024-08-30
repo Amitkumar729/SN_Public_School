@@ -1,0 +1,138 @@
+.birthday-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+
+}
+
+.birthday-header h2 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: #17a2b8;
+}
+
+.birthday-wrapper {
+    width: calc(93.333% - 5px);
+    margin: 0 auto; /* Center the slider container */
+    border: 1px solid #17a2b8;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.slick-slide {
+    padding: 10px; /* Optional: add some space between slides */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black; /* Customize arrow colors */
+}
+
+.birthday-container h3 {
+    background-color: #17a2b8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.birthday-photo-container {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+
+.birthday-photo-container img {
+    height: 250px;
+    border-radius: 15px;
+}
+
+.more-photos-button {
+    background-color: #17a2b8;
+  /* border-color: #17a2b8; */
+  border: 1px #17a2b8;
+  height: 50px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+    /* color: #17a2b8; */
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .birthday-wrapper {
+        /* width: 100%; */
+    }
+    .birthday-container {
+        width: 100%;
+    }
+
+    .birthday-container h3 {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .birthday-photo-container {
+        align-items: center;
+    }
+    .birthday-photo-container img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .birthday-container h3 {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .birthday-container {
+        width: 100%;
+    }
+    .birthday-photo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+    .birthday-photo-container img {
+        height: 220px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-container h3 {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .birthday-container {
+        width: 100%;
+    }
+
+    .birthday-photo-container {
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+
+    .birthday-photo-container img {
+        height: 220px;
+    }
+}
