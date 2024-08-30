@@ -1,0 +1,101 @@
+.facility-container {
+    /* General styles for the container */
+}
+
+.facility-wrapper {
+    /* General styles for the wrapper */
+}
+
+.facility-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.facility-header {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+}
+
+.facility-sub-header {
+    width: 45vw;
+    text-align: center; /* Center-align the sub-header text */
+}
+
+.facility-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%; /* Make sure it takes full width */
+}
+
+.facility-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0.5px solid #17a2b8;
+    height: 150px;
+    width: calc(33.333% - 50px); /* Adjust width to fit 3 items per line with margin */
+    margin: 10px; /* Add margin to create space between items */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.facility-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #17a2b8;
+}
+
+.facility-left {
+    width: 80px;
+    padding: 10px;
+}
+
+.facility-left img {
+    height: 38px;
+}
+
+.facility-right {
+    /* Optional styles */
+}
+
+.facility-top {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+}
+
+.facility-bottom {
+    width: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .facility-item {
+        width: calc(50% - 40px); /* Adjust to 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .facility-sub-header {
+        width: 60vw; /* Make the sub-header take more space on smaller screens */
+    }
+    .facility-item {
+        width: calc(100% - 40px); /* Adjust to 1 item per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-top {
+        font-size: 20px; /* Reduce font size on very small screens */
+    }
+    .facility-bottom {
+        width: auto; /* Allow content to take full width */
+    }
+}
