@@ -1,0 +1,110 @@
+.academics-container {
+    width: 100%; /* Ensure it takes up the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 wheat;
+    margin-top: 25px;
+  }
+  
+  .academics-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  
+  .academics-header h3 {
+    font-weight: bold;
+    font-family: "Lobster Two", cursive;
+    color: #17a2b8;
+  }
+  
+  .academics-sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  
+  .academics-sub-header h5 {
+    font-weight: bold;
+    font-family: "Lobster Two", cursive;
+    color: #17a2b8;
+  }
+  
+  .academics-whole-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allows the wrappers to wrap on smaller screens */
+    align-items: flex-start; /* Align items at the start of the container */
+    justify-content: space-evenly; /* Distribute space evenly between items */
+    gap: 30px; /* Gap between the items */
+  }
+  
+  .academics-wrapper {
+    border: 1px solid wheat;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    width: 30%; /* Set a relative width for responsive design */
+    min-width: 280px; /* Ensure it doesn't get too small */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+  }
+  
+  .academics-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .academics-text p b {
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 1024px) {
+    .academics-wrapper {
+      width: 45%; /* Adjust the width on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .academics-wrapper {
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .academics-header h3,
+    .academics-sub-header h5 {
+      text-align: center; /* Center text alignment */
+      font-size: 24px; /* Adjust header font size */
+    }
+  
+    .academics-text {
+      text-align: center; /* Center the text on smaller screens */
+      padding: 0 10px; /* Add some padding for better readability */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .academics-wrapper {
+      width: 100%; /* Full width on very small screens */
+      padding: 8px; /* Reduce padding */
+    }
+  
+    .academics-header h3 {
+      font-size: 22px; /* Further reduce font size for small screens */
+    }
+
+    .academics-sub-header h5{
+        font-size: 16px;
+    }
+  
+    .academics-text {
+      text-align: center;
+      font-size: 14px; /* Adjust font size for small screens */
+      padding: 0 15px; /* Adjust padding for readability */
+    }
+  }
+  

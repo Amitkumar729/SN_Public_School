@@ -1,0 +1,87 @@
+.about-container {
+    margin-top: 25px;
+    width: 100%; /* Make sure it takes up the full width */
+}
+
+.about-wrapper {
+    /* Optional: Add styling here if needed */
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 wheat;
+    width: 100%; /* Full width to allow responsive adjustments */
+}
+
+.intro-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.intro-header h3 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: #17a2b8;
+}
+
+.intro-wrapper {
+    display: flex;
+    gap: 25px;
+    width: 100%; /* Full width to allow responsive adjustments */
+}
+
+.intro-photo {
+    margin-left: 25px;
+}
+
+.intro-photo img {
+    height: 250px;
+    border-radius: 10px;
+}
+
+.intro-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .intro-wrapper {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center content */
+    }
+
+    .intro-photo {
+        margin-left: 0; /* Reset margin for centered alignment */
+        margin-bottom: 20px; /* Add space between photo and text */
+    }
+
+    .intro-photo img {
+        height: 200px; /* Adjust image size for smaller screens */
+        width: 300px;
+    }
+
+    .intro-text {
+        text-align: center; /* Center the text on smaller screens */
+        padding: 0 15px; /* Add padding for better text alignment */
+    }
+
+    .intro-header h3 {
+        font-size: 24px; /* Adjust header size */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-photo img {
+        height: 150px; /* Further adjust image size for very small screens */
+    }
+
+    .intro-header h3 {
+        font-size: 20px; /* Adjust header size for very small screens */
+    }
+}

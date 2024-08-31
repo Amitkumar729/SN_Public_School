@@ -1,0 +1,84 @@
+.aims-container {
+    width: 100%; /* Ensure it takes up the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 wheat;
+    margin-top: 25px;
+  }
+  
+  .aims-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  
+  .aims-header h3 {
+    font-weight: bold;
+    font-family: "Lobster Two", cursive;
+    color: #17a2b8;
+  }
+  
+  .aims-wrapper {
+    display: flex;
+    gap: 25px;
+    width: 100%; /* Full width to allow responsive adjustments */
+  }
+  
+  .aims-photo {
+    margin-left: 25px;
+  }
+  
+  .aims-photo img {
+    height: 250px;
+    border-radius: 10px;
+  }
+  
+  .aims-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .aims-text p b {
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .aims-wrapper {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center content */
+    }
+  
+    .aims-photo {
+      margin-left: 0; /* Reset margin for centered alignment */
+      margin-bottom: 20px; /* Add space between photo and text */
+    }
+  
+    .aims-photo img {
+      height: 200px; /* Adjust image size for smaller screens */
+    }
+  
+    .aims-text {
+      text-align: center; /* Center the text on smaller screens */
+    }
+  
+    .aims-header h3 {
+      font-size: 24px; /* Adjust header size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aims-photo img {
+      height: 170px; /* Further adjust image size for very small screens */
+      width: 300px;
+    }
+  
+    .aims-header h3 {
+      font-size: 20px; /* Adjust header size for very small screens */
+    }
+  }
+  

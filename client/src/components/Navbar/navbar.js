@@ -10,27 +10,19 @@ const Navbar = () => {
           <h4 className="nav-name">S.N.PUBLIC SCHOOL</h4>
         </div>
         <div className="nav-links">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/">
             Home
           </a>
-          <a className="nav-link" href="#">
-            Academics
+          <a className="nav-link" href="/about">
+            About
           </a>
-          <a className="nav-link" href="#">
-            Infrastructure
+          <a className="nav-link" href="/gallery">
+            Gallery
           </a>
-          <a className="nav-link" href="#">
-            Management
+          <a className="nav-link" href="/rules&regulations">
+            Rules & Regulation
           </a>
-          <a className="nav-link" href="#">
-          Gallery
-          </a>
-          <a className="nav-link" href="#">
-          Rules & Regulation
-          </a>
-          <a className="nav-link" href="#">
-            Notice
-          </a>
+         
         </div>
         <button className="contactUs-button">Contact Us</button>
       </nav>

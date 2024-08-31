@@ -1,0 +1,125 @@
+.footer-container {
+    margin-top: 25px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    /* height: auto; */
+}
+
+.footer-wrapper {
+    /* display: flex; */
+    height: auto;  
+    background-color: #00394F;
+    padding: 20px; /* Add padding for inner spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow around the wrapper */
+    border-radius: 10px; /* Smooth corners */
+}
+
+.sub-wrapper {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-heading h4 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: white;
+    margin: 0; /* Remove margin for better alignment */
+}
+
+.first-container {
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 20px; /* Add margin between sections */
+    border-radius: 10px; /* Smooth corners */
+    width: fit-content;
+}
+
+.first-header h3 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: white;
+    margin-bottom: 15px; /* Space between header and content */
+}
+
+.address,
+.phone-number,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px; /* Space between each section */
+}
+
+.address-text p,
+.phone h6,
+.email-id h6 {
+    color: white;
+    margin: 0; /* Remove margin for better alignment */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.phone-number h6,
+.email-id h6 {
+    font-size: 16px;
+}
+
+.second-container {
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+}
+
+.item-text {
+    color: white;
+}
+
+.second-heading h4 {
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    color: white;
+    margin-bottom: 15px; 
+}
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .first-container {
+        width: 100%; /* Ensure it takes full width on smaller screens */
+        padding: 15px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
+
+    .address,
+    .phone-number,
+    .email {
+        justify-content: flex-start; /* Align items to the start */
+    }
+}
