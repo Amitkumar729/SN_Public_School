@@ -120,7 +120,7 @@ const academics = () => {
             </p>
             <p>
               <b>2. </b>
-              INURSERY: Interview for memory re-cognition, aptitude and
+              NURSERY: Interview for memory re-cognition, aptitude and
               observation.
             </p>
           </div>

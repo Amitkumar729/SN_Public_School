@@ -1,5 +1,6 @@
-import React, { Suspense, lazy } from "react";
-
+import React, { Suspense, lazy, useEffect, useState } from "react";
+import Loader from "../../components/Loader/loader";
+import FormModal from "../../components/FromModal/formModal";
 const Banner = lazy(() => import("../../components/banner/banner"));
 const Facility = lazy(() => import("../../components/Facility/facility"));
 const AboutFaculty = lazy(() =>
@@ -12,10 +13,16 @@ const Contact = lazy(() => import("../../components/ContactUs/contactUs"));
 const Footer = lazy(() => import("../../components/Footer/footer"));
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
   return (
     <div>
-      <Suspense fallback={<div>...Loading...</div>}>
-        <Banner />
+      <Suspense fallback={<Loader />}>
+      <Banner />
+      <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         <Facility />
         <AboutFaculty />
         <Activity />

@@ -1,24 +1,20 @@
 .footer-container {
     margin-top: 25px;
     border-radius: 10px;
-    /* border: 1px solid red; */
-    /* height: auto; */
 }
 
 .footer-wrapper {
-    /* display: flex; */
-    height: auto;  
     background-color: #00394F;
-    padding: 20px; /* Add padding for inner spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow around the wrapper */
-    border-radius: 10px; /* Smooth corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .sub-wrapper {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .footer-header {
@@ -36,90 +32,83 @@
 
 .footer-heading h4 {
     font-weight: bold;
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Times New Roman', Times, serif;
     color: white;
-    margin: 0; /* Remove margin for better alignment */
+    margin: 0;
 }
 
-.first-container {
+.first-container, .second-container {
     border: 1px solid white;
     padding: 20px;
-    margin-top: 20px; /* Add margin between sections */
-    border-radius: 10px; /* Smooth corners */
+    margin-top: 20px;
+    border-radius: 10px;
     width: fit-content;
+    flex: 1 1 100%; /* Ensure containers take full width on smaller screens */
+    max-width: 400px; /* Optional: max width for containers */
 }
 
-.first-header h3 {
+.first-header h3, .second-heading h4 {
     font-weight: bold;
     font-family: 'Lobster Two', cursive;
     color: white;
-    margin-bottom: 15px; /* Space between header and content */
+    margin-bottom: 15px;
 }
 
-.address,
-.phone-number,
-.email {
+.address, .phone-number, .email, .item {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px; /* Space between each section */
+    margin-bottom: 15px;
 }
 
-.address-text p,
-.phone h6,
-.email-id h6 {
+.address-text p, .phone h6, .email-id h6, .item-text {
     color: white;
-    margin: 0; /* Remove margin for better alignment */
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.phone-number h6,
-.email-id h6 {
+.phone-number h6, .email-id h6, .item-text {
     font-size: 16px;
-}
-
-.second-container {
-    border: 1px solid white;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.item {
-    display: flex;
-    gap: 15px;
-}
-
-.item-text {
-    color: white;
-}
-
-.second-heading h4 {
-    font-weight: bold;
-    font-family: 'Lobster Two', cursive;
-    color: white;
-    margin-bottom: 15px; 
 }
 
 @media (max-width: 768px) {
     .footer-wrapper {
         flex-direction: column;
         align-items: center;
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 10px;
     }
 
-    .first-container {
-        width: 100%; /* Ensure it takes full width on smaller screens */
+    .sub-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-container, .second-container {
+        width: 100%;
         padding: 15px;
+        margin-top: 15px;
     }
 
     .footer-header {
         flex-direction: column;
-        gap: 5px; /* Reduce gap for smaller screens */
+        gap: 5px;
     }
 
-    .address,
-    .phone-number,
-    .email {
-        justify-content: flex-start; /* Align items to the start */
+    .address, .phone-number, .email, .item {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        height: 60px;
+    }
+
+    .first-container, .second-container {
+        padding: 10px;
+    }
+    
+    .footer-header {
+        padding: 5px;
     }
 }

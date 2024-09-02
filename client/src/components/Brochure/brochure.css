@@ -1,0 +1,79 @@
+.brochure-container {
+  width: 100%; /* Ensure it takes up the full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 wheat;
+  margin-top: 25px;
+}
+
+.brochure-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.brochure-header h3 {
+  font-weight: bold;
+  font-family: "Lobster Two", cursive;
+  color: #17a2b8;
+}
+
+.brochure-wrapper {
+  display: flex;
+  gap: 25px;
+  width: 100%; /* Full width to allow responsive adjustments */
+}
+
+.brochure-button {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+
+  /* gap: 10px; */
+}
+
+.brochure-button button {
+  background-color: orangered;
+  border: orange;
+  color: white;
+  width: 120px;
+  height: 50px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.brochure-button button:hover {
+  background-color: #00394f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .brochure-wrapper {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center content */
+  }
+
+  .brochure-header h3 {
+    font-size: 24px; /* Adjust header size */
+  }
+}
+
+@media (max-width: 480px) {
+  .brochure-photo img {
+    height: 170px; /* Further adjust image size for very small screens */
+    width: 300px;
+  }
+
+  .brochure-header h3 {
+    font-size: 20px; /* Adjust header size for very small screens */
+  }
+}

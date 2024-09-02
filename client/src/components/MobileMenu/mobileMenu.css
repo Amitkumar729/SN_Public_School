@@ -1,0 +1,65 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  .mobile-menu.open {
+    right: 0;
+  }
+  
+  .close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .mobile-nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+    padding: 10px 0;
+    color: #333;
+  }
+  
+  .mobile-nav-link.active {
+    color: #17a2b8;
+  }
+  
+  .mobile-contactUs-button {
+    background-color: #17a2b8;
+    border: none;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-menu {
+      display: none;
+    }
+  }

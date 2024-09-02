@@ -1,21 +1,17 @@
 .nav-container {
-  /* border: 1px solid red; */
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
   box-shadow: 0 1px wheat;
   margin-top: 5px;
   padding: 3px;
 }
 
 .nav-wrapper {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .nav-logo {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -24,7 +20,9 @@
 
 .nav-logo img {
   height: 80px;
+  cursor: pointer;
 }
+
 .nav-logo h4 {
   font-family: "Times New Roman", Times, serif;
   color: brown;
@@ -32,7 +30,6 @@
 }
 
 .nav-links {
-  /* border: 1px solid red; */
   width: 60vw;
   display: flex;
   align-items: center;
@@ -46,14 +43,17 @@
   font-size: 20px;
 }
 
+.nav-link.active {
+  font-weight: bold;
+  color: #17a2b8;
+}
+
 .nav-link:hover {
   color: #17a2b8;
 }
 
 .contactUs-button {
-  /* border: 1px solid red; */
   background-color: #17a2b8;
-  /* border-color: #17a2b8; */
   border: 1px #17a2b8;
   height: 50px;
   width: 100px;
@@ -67,29 +67,38 @@
   margin-right: 10px;
 }
 
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
-    .nav-logo{
-        margin-left: 10px;
-    }
-
-    .nav-logo h4 {
-        margin-left: 5px;
-    }
-    .nav-links {
-      display: none; /* Hide the nav links on smaller screens */
-    }
-  
-    .nav-wrapper {
-      width: 100%; /* Ensure the wrapper takes full width */
-      justify-content: space-between; /* Space out logo and button */
-    }
-  
-    .nav-logo {
-      justify-content: flex-start; /* Ensure logo is aligned to the start */
-    }
-  
-    .contactUs-button {
-      margin-left: auto; /* Keep the button at the end */
-    }
+  .nav-logo {
+    margin-left: 10px;
   }
+
+  .nav-logo h4 {
+    margin-left: 5px;
+  }
+
+  .nav-links, .contactUs-button {
+    display: none;
+  }
+
+  .nav-wrapper {
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    justify-content: flex-start;
+  }
+
+  .hamburger-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}

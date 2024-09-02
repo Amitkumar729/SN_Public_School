@@ -1,31 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
+import MobileMenu from "../MobileMenu/mobileMenu";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleNavigate = () => {
+    navigate('/contact-us');
+  };
+
+  const HomeNavigate = () => {
+    navigate('/');
+  }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="nav-container">
       <nav className="nav-wrapper">
-        <div className="nav-logo">
-          <img src="/assets/navLogo.png" />
+        <div className="nav-logo" onClick={HomeNavigate} >
+          <img src="/assets/navLogo.png" alt="Logo" />
           <h4 className="nav-name">S.N.PUBLIC SCHOOL</h4>
         </div>
         <div className="nav-links">
-          <a className="nav-link" href="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          >
             Home
-          </a>
-          <a className="nav-link" href="/about">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          >
             About
-          </a>
-          <a className="nav-link" href="/gallery">
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+          >
             Gallery
-          </a>
-          <a className="nav-link" href="/rules&regulations">
-            Rules & Regulation
-          </a>
-         
+          </NavLink>
         </div>
-        <button className="contactUs-button">Contact Us</button>
+        <button className="contactUs-button" onClick={handleNavigate}>Contact Us</button>
+        <button className="hamburger-icon" onClick={toggleMobileMenu}>☰</button>
       </nav>
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} onNavigate={handleNavigate} />
     </div>
   );
 };

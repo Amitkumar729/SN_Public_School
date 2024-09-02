@@ -1,62 +1,60 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import "./banner.css";
-import { FaCircleLeft } from "react-icons/fa6";
-import { FaCircleRight } from "react-icons/fa6";
+import SlickSlider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    "/assets/banner1.jpg",
-    "/assets/banner2.jfif ",
-    "/assets/banner3.jfif",
-    "/assets/banner4.jpg",
+const banner = () => {
+  const BannerPhoto = [
+    "/assets/banner3.jpg",
+    "/assets/banner1.png",
+    "/assets/banner2.jpg",
+    // "/assets/banner4.jpg",
+   
   ];
 
-  const totalSlides = slides.length;
-  const slideInterval = useRef(null);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+  const settings = {
+    className: "center",
+    centerPadding: "60px",
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
-  };
-
-  // Set up autoplay
-  useEffect(() => {
-    slideInterval.current = setInterval(nextSlide, 5000); // Change slide every 3 seconds
-
-    return () => {
-      clearInterval(slideInterval.current); // Clean up interval on component unmount
-    };
-  }, []);
 
   return (
-    <div className="slider">
-      <div
-        className="slides"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div
-            className="slide"
-            key={index}
-            style={{ backgroundImage: `url(${slide})` }}
-          >
-            {/* You can add content here */}
-          </div>
-        ))}
-      </div>
-      <div className="banner-prev-button" onClick={prevSlide}>
-        <FaCircleLeft size={30} />
-      </div>
-      <div className="banner-next-button" onClick={nextSlide}>
-        <FaCircleRight size={30}  />
+    <div className="banner-container">
+      <div className="banner-wrapper">
+        <SlickSlider {...settings}>
+          {BannerPhoto.map((photo, index) => (
+            <div key={index} className="banner-photo-container">
+              <img src={photo} alt={`Gallery ${index + 1}`} />{" "}
+            </div>
+          ))}
+        </SlickSlider>
       </div>
     </div>
   );
 };
 
-export default Banner;
+export default banner;
