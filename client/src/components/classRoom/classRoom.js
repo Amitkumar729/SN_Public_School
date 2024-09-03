@@ -1,7 +1,7 @@
 import React from "react";
 import "./classRoom.css"; // Ensure you have a CSS file for custom styles
-import { GiBurningRoundShot } from "react-icons/gi";
-import { FaMusic } from "react-icons/fa";
+// import { GiBurningRoundShot } from "react-icons/gi";
+// import { FaMusic } from "react-icons/fa";
 
 const classRoom = () => {
   return (
@@ -18,10 +18,10 @@ const classRoom = () => {
             </h5>
           </div>
         </div>
-        <div className="facility-items">
+        <div className="facility-items"> 
           <div className="facility-item">
             <div className="facility-left">
-              <img src="/assets/drawing.png"  style={{height: "55px"}} />
+              <img src="/assets/drawing.png"  alt="photo......" style={{height: "55px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Drawing Class</div>
@@ -33,7 +33,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-               <img src="/assets/conversation.png" style={{height: "50px"}}  />
+               <img src="/assets/conversation.png" alt="photo..." style={{height: "50px"}}  />
             </div>
             <div className="facility-right">
               <div className="facility-top">Language & Speaking</div>
@@ -45,7 +45,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/school.png" />
+            <img src="/assets/school.png" alt="photo..." />
             </div>
             <div className="facility-right">
               <div className="facility-top">General Knowledge</div>
@@ -57,7 +57,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/history.png"  style={{height: "53px"}} />
+            <img src="/assets/history.png" alt="photo..." style={{height: "53px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Religion & History</div>
@@ -69,7 +69,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/chemistry.png"  style={{height: "53px"}} />
+            <img src="/assets/chemistry.png"  alt="photo..." style={{height: "53px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Science</div>
@@ -81,7 +81,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/mathematician.png"  style={{height: "53px"}} />
+            <img src="/assets/mathematician.png" alt="photo..." style={{height: "53px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Mathematics</div>
@@ -93,7 +93,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/paint-palette.png"  style={{height: "53px"}} />
+            <img src="/assets/paint-palette.png" alt="photo..." style={{height: "53px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Art & Drawing</div>
@@ -105,7 +105,7 @@ const classRoom = () => {
           </div>
           <div className="facility-item">
             <div className="facility-left">
-            <img src="/assets/dancing.png"  style={{height: "55px"}} />
+            <img src="/assets/dancing.png" alt="photo..." style={{height: "55px"}} />
             </div>
             <div className="facility-right">
               <div className="facility-top">Dance</div>

@@ -11,7 +11,7 @@ const intro = () => {
           </div>
           <div className="intro-wrapper">
             <div className="intro-photo">
-              <img src="/assets/school-image.jpg" />
+              <img src="/assets/school-image.jpg"  alt="photo..." />
             </div>
             <div className="intro-text">
               <p>

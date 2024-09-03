@@ -9,7 +9,7 @@ const faculty = () => {
       </div>
       <div className="faculty-wrapper">
         <div className="faculty-left">
-          <img src="/assets/manjula.png" />
+          <img src="/assets/manjula.png"  alt="photo..." />
         </div>
         <div className="faculty-right">
           <div className="faculty-heading">

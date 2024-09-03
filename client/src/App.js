@@ -2,12 +2,14 @@ import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader/loader";
+import ProtectedGalleryAdminRoute from "./components/Authentication/auth";
+
 const Navbar = lazy(() => import("./components/Navbar/navbar"));
 const Home = lazy(() => import("./page/Home/home"));
 const AboutPage = lazy(() => import("./page/about/about"));
 const ContactPage = lazy(() => import("./page/Contact/contact"));
 const GalleryPage = lazy(() => import("./page/Gallery/gallery"));
-const Admin = lazy(() => import("./page/Admin/admin"));
+// const Admin = lazy(() => import("./page/Admin/admin"));
 
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/contact-us" element={<ContactPage />}></Route>
             <Route path="/gallery" element={<GalleryPage />}></Route>
-            <Route path="/gallery-admin-control" element={<Admin/>}></Route>
+
+            <Route path="/gallery-admin-control" Component={ProtectedGalleryAdminRoute}></Route>
           </Routes>
         </Suspense>
       </div>

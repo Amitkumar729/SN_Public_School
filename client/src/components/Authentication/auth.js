@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GalleryAdmin from "../GalleryAdmin/galleryAdmin";
+
+import "./auth.css";
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -8,11 +10,12 @@ const Login = ({ onLogin }) => {
 
   const handleLogin = () => {
     // Simple email and password check (replace with real authentication)
-    const adminEmail = "admin@example.com"; // Replace with your admin email
-    const adminPassword = "admin123"; // Replace with your admin password
-
+    const adminEmail = "hello"; // Replace with your admin email
+    const adminPassword = "hello"; // Replace with your admin password
+    // console.log(isAuthenticated);
     if (email === adminEmail && password === adminPassword) {
       onLogin(true);
+      sessionStorage.setItem("isAuthenticated", "true");
     } else {
       setError("Invalid email or password");
     }
@@ -41,6 +44,14 @@ const Login = ({ onLogin }) => {
 
 const ProtectedGalleryAdminRoute = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const authStatus = sessionStorage.getItem("isAuthenticated");
+
+    if (authStatus === "true") {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   return (
     <div>

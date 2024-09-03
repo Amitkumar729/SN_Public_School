@@ -9,7 +9,7 @@ const aims = () => {
       </div>
       <div className="aims-wrapper">
         <div className="aims-photo">
-          <img src="/assets/call-to-action.jpg" />
+          <img src="/assets/call-to-action.jpg" alt="photo..." />
         </div>
         <div className="aims-text">
           <p>
