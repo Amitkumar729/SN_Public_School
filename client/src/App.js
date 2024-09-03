@@ -7,6 +7,8 @@ const Home = lazy(() => import("./page/Home/home"));
 const AboutPage = lazy(() => import("./page/about/about"));
 const ContactPage = lazy(() => import("./page/Contact/contact"));
 const GalleryPage = lazy(() => import("./page/Gallery/gallery"));
+const Admin = lazy(() => import("./page/Admin/admin"));
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/contact-us" element={<ContactPage />}></Route>
             <Route path="/gallery" element={<GalleryPage />}></Route>
+            <Route path="/gallery-admin-control" element={<Admin/>}></Route>
           </Routes>
         </Suspense>
       </div>

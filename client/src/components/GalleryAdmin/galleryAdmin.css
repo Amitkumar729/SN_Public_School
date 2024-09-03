@@ -1,0 +1,99 @@
+.gallery-admin-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.upload-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.upload-section input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-section select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-section button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #17a2b8;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  background-color: #138496;
+}
+
+.admin-header1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.upload-button-wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 15px;
+}
+
+.gallery-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-item button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 100%;
+  }
+
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
