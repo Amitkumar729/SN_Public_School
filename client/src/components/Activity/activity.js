@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { storage, ref, listAll, getDownloadURL } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 import "./activity.css";
 import SlickSlider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Loader from "../Loader/loader";
 
-const activity = () => {
-  const galleryPhoto = [
-    "/assets/gallery1.jfif",
-    "/assets/gallery2.jfif",
-    "/assets/gallery3.webp",
-    "/assets/gallery4.jfif",
-    "/assets/gallery5.jfif",
-    "/assets/gallery6.webp",
-    // "/assets/gallery7.jfif",
-  ];
+const Activity = () => {
+  const [activityPhotos, setActivityPhotos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  const hadleNavigate = () => {
+    navigate("/gallery");
+  };
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      const activityRef = ref(storage, "images/event");
+      const activityResult = await listAll(activityRef);
+      const activityUrls = await Promise.all(
+        activityResult.items.map((itemRef) => getDownloadURL(itemRef))
+      );
+      setActivityPhotos(activityUrls);
+      setLoading(false);
+    };
+
+    fetchImages();
+  }, []);
 
   const settings = {
     className: "center",
@@ -46,24 +61,31 @@ const activity = () => {
 
   return (
     <div className="activity-container">
-    <div className="activity-header">
+      <div className="activity-header">
         <h2>School Activities</h2>
-    </div>
-    <div className="activity-wrapper">
-      <SlickSlider {...settings}>
-        {galleryPhoto.map((photo, index) => (
-          <div key={index} className="activity-photo-container">
-            {" "}
-            {/* Added unique key and corrected class name */}
-            <img src={photo} alt={`Gallery ${index + 1}`} />{" "}
-            {/* Added alt attribute */}
-          </div>
-        ))}
-      </SlickSlider>
       </div>
-      <button className="more-photos-button"  >More Photos</button>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="activity-wrapper">
+            <SlickSlider {...settings}>
+              {activityPhotos.map((photo, index) => (
+                <div key={index} className="activity-photo-container">
+                  {/* Added unique key and corrected class name */}
+                  <img src={photo} alt={`Gallery ${index + 1}`} />{" "}
+                  {/* Added alt attribute */}
+                </div>
+              ))}
+            </SlickSlider>
+          </div>
+          <button className="more-photos-button" onClick={hadleNavigate}>
+            More Photos
+          </button>
+        </>
+      )}
     </div>
   );
 };
 
-export default activity;
+export default Activity;

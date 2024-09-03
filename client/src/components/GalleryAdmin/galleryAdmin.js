@@ -15,6 +15,7 @@ import {
   listAll,
 } from "../../firebase";
 import "./galleryAdmin.css";
+import Loader from "../Loader/loader";
 
 const GalleryAdmin = () => {
   const [activityPhotos, setActivityPhotos] = useState([]);
@@ -22,7 +23,8 @@ const GalleryAdmin = () => {
   const [newImage, setNewImage] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [deletingStates, setDeletingStates] = useState({});
-  const [imageType, setImageType] = useState("event"); // Added to differentiate between event and birthday images
+  const [imageType, setImageType] = useState("event");
+  const [loading, setLoading] = useState(true);
 
   const fileInputRef = useRef(null);
 
@@ -43,6 +45,7 @@ const GalleryAdmin = () => {
       birthdayResult.items.map((itemRef) => getDownloadURL(itemRef))
     );
     setBirthdayPhotos(birthdayUrls);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -129,7 +132,6 @@ const GalleryAdmin = () => {
   return (
     <div className="gallery-admin-container">
       <h2>Gallery Admin Control</h2>
-
       <div className="upload-section">
         <input
           type="file"
@@ -151,33 +153,39 @@ const GalleryAdmin = () => {
         </div>
       </div>
 
-      <div className="admin-header1">
-        <h5>ACTIVITY PHOTOS</h5>
-      </div>
-      <div className="gallery-preview">
-        {activityPhotos.map((photo, index) => (
-          <div key={index} className="gallery-item">
-            <img src={photo} alt={`Activity ${index + 1}`} />
-            <button onClick={() => handleImageDelete(photo)}>
-              {deletingStates[photo] ? "Deleting..." : "Delete Image"}
-            </button>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="admin-header1">
+            <h5>ACTIVITY PHOTOS</h5>
           </div>
-        ))}
-      </div>
+          <div className="gallery-preview">
+            {activityPhotos.map((photo, index) => (
+              <div key={index} className="gallery-item">
+                <img src={photo} alt={`Activity ${index + 1}`} />
+                <button onClick={() => handleImageDelete(photo)}>
+                  {deletingStates[photo] ? "Deleting..." : "Delete Image"}
+                </button>
+              </div>
+            ))}
+          </div>
 
-      <div className="admin-header1">
-        <h5>BIRTHDAY PHOTOS</h5>
-      </div>
-      <div className="gallery-preview">
-        {birthdayPhotos.map((photo, index) => (
-          <div key={index} className="gallery-item">
-            <img src={photo} alt={`Birthday ${index + 1}`} />
-            <button onClick={() => handleImageDelete(photo)}>
-              {deletingStates[photo] ? "Deleting..." : "Delete Image"}
-            </button>
+          <div className="admin-header1">
+            <h5>BIRTHDAY PHOTOS</h5>
           </div>
-        ))}
-      </div>
+          <div className="gallery-preview">
+            {birthdayPhotos.map((photo, index) => (
+              <div key={index} className="gallery-item">
+                <img src={photo} alt={`Birthday ${index + 1}`} />
+                <button onClick={() => handleImageDelete(photo)}>
+                  {deletingStates[photo] ? "Deleting..." : "Delete Image"}
+                </button>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

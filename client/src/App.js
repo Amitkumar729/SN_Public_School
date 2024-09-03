@@ -23,7 +23,6 @@ function App() {
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/contact-us" element={<ContactPage />}></Route>
             <Route path="/gallery" element={<GalleryPage />}></Route>
-
             <Route path="/gallery-admin-control" Component={ProtectedGalleryAdminRoute}></Route>
           </Routes>
         </Suspense>
