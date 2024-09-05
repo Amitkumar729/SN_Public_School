@@ -10,8 +10,8 @@ const Login = ({ onLogin }) => {
 
   const handleLogin = () => {
     // Simple email and password check (replace with real authentication)
-    const adminEmail = "hello"; // Replace with your admin email
-    const adminPassword = "hello"; // Replace with your admin password
+    const adminEmail = process.env.REACT_APP_ADMIN_EMAIL; // Replace with your admin email
+    const adminPassword = process.env.REACT_APP_ADMIN_PASSWORD; // Replace with your admin password
     // console.log(isAuthenticated);
     if (email === adminEmail && password === adminPassword) {
       onLogin(true);

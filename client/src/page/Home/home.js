@@ -11,6 +11,9 @@ const ClassRoom = lazy(() => import("../../components/classRoom/classRoom"));
 const Birthday = lazy(() => import("../../components/Birthday/birthday"));
 const Contact = lazy(() => import("../../components/ContactUs/contactUs"));
 const Footer = lazy(() => import("../../components/Footer/footer"));
+const ThoughtOfTheDay = lazy(() =>
+  import("../../components/ThoughtOfTheDay/thought")
+);
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,8 +24,9 @@ const Home = () => {
   return (
     <div>
       <Suspense fallback={<Loader />}>
-      <Banner />
-      <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <Banner />
+        <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <ThoughtOfTheDay/>
         <Facility />
         <AboutFaculty />
         <Activity />

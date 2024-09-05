@@ -1,0 +1,62 @@
+/* Main container to center and add background */
+.thought-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+}
+
+/* Wrapper to give some padding and style to the content */
+.thought-wrapper {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Header style */
+.thought-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Lobster Two", cursive;
+  color: #17a2b8;
+  /* font-weight: 600; */
+}
+
+/* Text style */
+.thought-text {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .thought-header {
+    font-size: 1.2rem;
+  }
+
+  .thought-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thought-wrapper {
+    padding: 10px;
+  }
+
+  .thought-header {
+    font-size: 1rem;
+  }
+
+  .thought-text {
+    font-size: 0.8rem;
+  }
+}
