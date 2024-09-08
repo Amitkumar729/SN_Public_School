@@ -11,10 +11,7 @@ const Facility = () => {
           <h2 className="facility-header">School Facility</h2>
           <div className="facility-sub-header">
             <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              consectetur aliquam laboriosam fugit hic voluptatibus eos
-              similique ex ratione maxime, quis eum, quae aperiam dicta voluptas
-              neque natus sit consequatur.
+            Our school offers top-tier facilities, including a modern library, well-equipped science and computer labs, a spacious auditorium, and diverse sports amenities. Students enjoy a safe playground, creative art and music rooms, and a hygienic cafeteria, all designed to support academic, physical, and creative growth in a conducive environment.
             </h5>
           </div>
         </div>
@@ -30,8 +27,7 @@ const Facility = () => {
             <div className="facility-right">
               <div className="facility-top">Play Ground</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              A large, safe playground offers students space for enjoyable outdoor activities and recreational games.
               </div>
             </div>
           </div>
@@ -46,8 +42,7 @@ const Facility = () => {
             <div className="facility-right">
               <div className="facility-top">Music & Dance</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              Students explore creativity through engaging music and dance programs, enhancing cultural expression.
               </div>
             </div>
           </div>
@@ -58,8 +53,7 @@ const Facility = () => {
             <div className="facility-right">
               <div className="facility-top">Arts & Crafts</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              Creative arts and crafts activities foster imagination, hands-on learning, and artistic development.
               </div>
             </div>
           </div>
@@ -74,8 +68,7 @@ const Facility = () => {
             <div className="facility-right">
               <div className="facility-top">Safe Transportation</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              Our safe transportation ensures timely, secure travel for students, prioritizing their well-being.
               </div>
             </div>
           </div>
@@ -88,10 +81,9 @@ const Facility = () => {
               />
             </div>
             <div className="facility-right">
-              <div className="facility-top">Health Food</div>
+              <div className="facility-top">Healthy Food</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              Nutritious daily meals enhance students' physical health and boost their overall academic performance.
               </div>
             </div>
           </div>
@@ -106,8 +98,7 @@ const Facility = () => {
             <div className="facility-right">
               <div className="facility-top">Educational Tour</div>
               <div className="facility-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos,
-                dicta!
+              Educational tours offer hands-on learning experiences, broadening students' knowledge beyond the classroom.
               </div>
             </div>
           </div>

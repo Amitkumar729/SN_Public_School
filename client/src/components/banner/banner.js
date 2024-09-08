@@ -7,10 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 const banner = () => {
   const BannerPhoto = [
     "/assets/banner3.jpg",
-    "/assets/banner1.png",
-    "/assets/banner2.jpg",
-    // "/assets/banner4.jpg",
-   
+    "/assets/s1.jpg",
+    "/assets/s2.jpg",
+    "/assets/s3.jpg",
+    "/assets/s4.jpg",
+    "/assets/s5.jpg",
+    "/assets/s6.jpg",
   ];
 
   const settings = {
