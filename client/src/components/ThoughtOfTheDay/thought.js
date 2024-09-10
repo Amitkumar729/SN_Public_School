@@ -44,6 +44,7 @@ const Thought = () => {
   // useEffect to call handleDailyThought on component mount
   useEffect(() => {
     handleDailyThought();
+    // eslint-disable-next-line
   }, []);
 
   return (

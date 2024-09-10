@@ -58,7 +58,7 @@ const faculty = () => {
             <h3>From the Desk Of School Director</h3>
           </div>
           <div className="faculty-name">
-            <h4>Manjula Gupta</h4>
+            <h4>kajal Sinha</h4>
           </div>
           <div className="about-faculty">
             <p>
