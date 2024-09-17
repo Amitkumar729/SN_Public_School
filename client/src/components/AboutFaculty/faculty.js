@@ -55,7 +55,7 @@ const faculty = () => {
       <div className="faculty-wrapper swapped">
         <div className="faculty-right">
           <div className="faculty-heading">
-            <h3>From the Desk Of School Director</h3>
+            <h3>From the Desk Of School Cordinator</h3>
           </div>
           <div className="faculty-name">
             <h4>kajal Sinha</h4>
